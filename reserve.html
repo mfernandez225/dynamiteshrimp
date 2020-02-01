@@ -11,8 +11,7 @@
     <!-- Sweet Favicon -->
     <link rel="icon" href="./assets/favicon.ico">
     <!-- Bootstrap Link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- CSS Link -->
     <link rel="stylesheet" href="style.css">
     <!-- Button Icons Link -->
@@ -56,8 +55,7 @@
 
             <div class="form-group">
                 <label for="exampleFormControlInput1">Email</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1"
-                    placeholder="HungryPatron@DynomiteShrimp.com">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="HungryPatron@DynomiteShrimp.com">
             </div>
 
             <div class="form-group">
@@ -82,7 +80,25 @@
             </p>
         </div>
     </footer>
+    <script type="text/javascript">
+        // Question: What does this code do?
+        $("#submit").on("click", function(event) {
+            event.preventDefault();
+            var reserve = {
+                name: $("#name").val().trim(),
+                number: $("#number").val().trim(),
+                email: $("#email").val().trim(),
+                unique: $("#unique").val().trim()
+            };
 
+            // Question: What does this code do??
+            $.post("/api/tables", reserve)
+                .then(function(data) {
+                    console.log("add.html", data);
+                    alert("Adding character...");
+                });
+        });
+    </script>
 
 </body>
 
