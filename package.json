@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/mfernandez225/dynamiteshrimp#readme",
   "dependencies": {
-    "ajax": "0.0.4"
+    "ajax": "0.0.4",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
   }
 }
