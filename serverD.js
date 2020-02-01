@@ -9,11 +9,12 @@ var app = express();
 var PORT = process.env.PORT || 5050;
 
 // Sets up the Express app to handle data parsing
-app.use(express.urlencoded({
-    extended: true
-}));
+app.use(
+    express.urlencoded({
+        extended: true
+    })
+);
 app.use(express.json());
-
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function (req, res) {
@@ -36,4 +37,8 @@ app.get("/api/tables", function (req, res) {
 
 app.get("/api/reserve", function (req, res) {
     return res.json(waitList);
+});
+
+app.listen(PORT, function () {
+    console.log("App listening on PORT: " + PORT);
 });

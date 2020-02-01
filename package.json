@@ -1,0 +1,25 @@
+{
+  "name": "dynamiteshrimp",
+  "version": "1.0.0",
+  "description": "Our head chef is Bubba's grandchild from Forest Gump",
+  "main": "serverD.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfernandez225/dynamiteshrimp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mfernandez225/dynamiteshrimp/issues"
+  },
+  "homepage": "https://github.com/mfernandez225/dynamiteshrimp#readme",
+  "dependencies": {
+    "ajax": "0.0.4",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
