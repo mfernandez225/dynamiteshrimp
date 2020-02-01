@@ -11,7 +11,8 @@
     <!-- Sweet Favicon -->
     <!-- <link rel="icon" href="./assets/favicon.ico"> -->
     <!-- Bootstrap Link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- CSS Link -->
     <link rel="stylesheet" href="style.css">
     <!-- Button Icons Link -->
@@ -34,12 +35,12 @@
 
             <div class="row">
                 <div class="container text-center">
-                    <a href="tables.html">
+                    <a href="/tables">
                         <button type="button" class="btn btn-primary" id="tables">
                             <img src="https://image.flaticon.com/icons/svg/2457/2457449.svg" alt="..."
                                 class="d-inline mr-2" style="width: 20px; height:20px">View Tables</button>
                     </a>
-                    <a href="index.html">
+                    <a href="/index">
                         <button type="button" class="btn btn-danger" id="goHome"><i class="fa fa-home"></i></button>
                     </a>
                 </div>
@@ -90,7 +91,7 @@
     </footer>
     <script type="text/javascript">
         // Question: What does this code do?
-        $("#submit").on("click", function(event) {
+        $("#submit").on("click", function (event) {
             event.preventDefault();
             var reserve = {
                 name: $("#name").val().trim(),
@@ -101,11 +102,12 @@
 
             // Question: What does this code do??
             $.post("/api/tables", reserve)
-                .then(function(data) {
+                .then(function (data) {
                     console.log("add.html", data);
                     alert("Adding character...");
                 });
         });
+
     </script>
 
 </body>
